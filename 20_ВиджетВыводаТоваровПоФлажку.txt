@@ -1,0 +1,38 @@
+<?
+
+$shop_id = Core_Array::get(Core_Page::instance()->widgetParams, 'shopId');
+$xsl = Core_Array::get(Core_Page::instance()->widgetParams, 'xsl');
+$limit = Core_Array::get(Core_Page::instance()->widgetParams, 'limit');
+$myprop = Core_Array::get(Core_Page::instance()->widgetParams, 'myprop');
+
+$Shop_Controller_Show = new Shop_Controller_Show(
+	Core_Entity::factory('Shop', $shop_id)
+);
+$Shop_Controller_Show
+	->xsl(
+			Core_Entity::factory('Xsl')->getByName($xsl)
+	)
+	->groupsMode('none')
+	->itemsForbiddenTags(array('text'))
+	->itemsProperties(TRUE)
+	->itemsPropertiesList(FALSE)
+	->viewed(false)
+	->favorite(false)               
+	->group(FALSE)
+	->limit($limit);
+
+$Shop_Controller_Show
+	->shopItems()
+	->queryBuilder()
+	->leftJoin('property_value_ints', 'property_value_ints.entity_id', '=', 'shop_items.id')
+	->leftJoin('shop_groups', 'shop_groups.id', '=', 'shop_items.shop_group_id')
+	->where('property_value_ints.value', '=', '1')
+	->where('property_value_ints.property_id', '=', $myprop)// id дополнительного свойства
+	->where('shop_groups.deleted', '=', 0)
+	->where('shop_groups.active', '=', 1)
+	->where('shop_items.deleted', '=', 0)
+	->where('shop_items.active', '=', 1)
+	->clearOrderBy()
+	->orderBy('RAND()');
+$Shop_Controller_Show->show();
+?>
