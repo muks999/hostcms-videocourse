@@ -1,6 +1,9 @@
 # Видеокурс «Создать интернет-магазин на Hostcms за 4 часа»
 Сам видеокурс находится здесь: [Видеокурс на Youtube](https://www.youtube.com/playlist?list=PLkuR2FZXP-9nsW0AX4b-RO8qF3B5D4gC6)
+
 Здесь же будет краткая инструкция, ответы на вопросы, файлы к видео и html-шаблон.
+
+Наш сайт: [Nivaks Studio](https://nivaks-studio.ru)
 
 ## Инструкция
 1. [скачайте html-шаблон](https://github.com/NivaksStudio/hostcms-videocourse/blob/master/eshopper.zip)
