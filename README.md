@@ -109,3 +109,7 @@
 
 [Файл XSL-шаблона «МагазинФильтр»](https://github.com/NivaksStudio/hostcms-videocourse/blob/master/29_МагазинФильтр.txt).
 [Скрипт для отслеживания ползунка здесь](http://nikolaigromkov.ru/all/stilizaciya-filtra/)
+
+### Для 33 урока
+
+[Скрипт валидации формы](http://nikolaigromkov.ru/all/validaciya-formy/)
