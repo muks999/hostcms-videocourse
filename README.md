@@ -113,3 +113,14 @@
 ### Для 33 урока
 
 [Скрипт валидации формы](http://nikolaigromkov.ru/all/validaciya-formy/)
+
+
+### Для 39 урока
+
+[Как открыть Ютуб в модальном окне](http://nikolaigromkov.ru/all/otkryt-yutub-po-ssylke/)
+
+
+### Для 42 урока
+
+[PHP форма](http://nikolaigromkov.ru/all/forma-3-0/)
+
